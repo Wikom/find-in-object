@@ -3,7 +3,7 @@
  */
 
 const findInObject = (/*string*/key, /*Object*/object) => {
-    if (object === null || key === null) {
+    if (object == null || key == null) {
         return null;
     }
     const keyParts = key.split('.');
