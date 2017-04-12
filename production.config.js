@@ -2,13 +2,15 @@
  * Created by rouven on 11.04.17.
  */
 
+const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-    entry: __dirname + '/src/index.js',
+    entry: './src/index.js',
     output: {
-        path: __dirname + '/lib',
+        path: path.resolve(__dirname, 'lib'),
         filename: 'index.js',
+        library: 'findInObject',
         libraryTarget: 'umd',
         umdNamedDefine: true
     },
@@ -29,7 +31,12 @@ module.exports = {
             }
         }),
         new webpack.optimize.UglifyJsPlugin({
-            sourceMap: true
+            compress: {
+                drop_console: true
+            },
+            output: {
+                comments: false
+            }
         })
     ]
 };
