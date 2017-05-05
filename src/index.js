@@ -13,7 +13,7 @@ const findInObject = (/*string*/key, /*Object*/object) => {
         return findInObject(keyParts.join('.'), newObject);
     }
     if (object) {
-        return object[key];
+        return object[key] || null;
     }
 
     return null;
