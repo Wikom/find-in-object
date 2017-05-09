@@ -12,11 +12,10 @@ const findInObject = (/*string*/key, /*Object*/object) => {
         const newObject = object[keyParts.shift()];
         return findInObject(keyParts.join('.'), newObject);
     }
-    if (object) {
-        return object[key] || null;
-    }
 
-    return null;
+    return (object && typeof object[key] !== 'undefined')
+        ? object[key]
+        : null;
 };
 
 export default findInObject;
