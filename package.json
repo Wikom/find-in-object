@@ -1,8 +1,8 @@
 {
   "name": "find-in-object",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "main": "lib/index.js",
-  "module": "src/index.js",
+  "module": "lib/index.js",
   "repository": "git@github.com:Wikom/find-in-object.git",
   "author": "Rouven Diener",
   "license": "MIT",
